@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of https://uppercase.co.in (2026-07-21)
+description: >-
+  Cross-cutting standards the uppercase storefront's machine surfaces conform
+  to, evidenced by documents fetched from the host. The store is a Shopify
+  storefront, so these are platform-provided conformances exposed on the
+  store's own domain.
+standards:
+  - id: oidc-discovery
+    conforms: true
+    evidence: /.well-known/openid-configuration returns a valid OIDC discovery document (well-known/uppercase-openid-configuration.json)
+  - id: oauth2
+    conforms: true
+    evidence: authorization-code + refresh-token + JWT-bearer grants with PKCE S256, RFC 8414 metadata at /.well-known/oauth-authorization-server
+  - id: ucp-2026-04-08
+    conforms: true
+    evidence: /.well-known/ucp merchant profile advertises UCP versions 2026-04-08 and 2026-01-23 (well-known/uppercase-ucp.json)
+  - id: mcp
+    conforms: true
+    evidence: dev.ucp.shopping service published with transport "mcp"; endpoint /api/ucp/mcp answers JSON-RPC (probed 2026-07-21)
+  - id: llms-txt
+    conforms: true
+    evidence: /llms.txt and /agents.md agent-instruction documents served (llms/uppercase-llms.txt)
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404

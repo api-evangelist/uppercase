@@ -1,0 +1,56 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://uppercase.co.in/.well-known/ucp
+description: >-
+  The uppercase storefront (Shopify) publishes a live agent-commerce surface
+  via the Universal Commerce Protocol (UCP): the merchant profile at
+  /.well-known/ucp advertises a dev.ucp.shopping service with transport "mcp".
+  The MCP endpoint answers JSON-RPC (probed 2026-07-21: tools/list responds
+  but requires an agent profile URI for UCP discovery before listing tools).
+  The tool flow below is captured verbatim from the store's own /llms.txt and
+  /agents.md agent instructions; the full tool schema is published as OpenRPC
+  by UCP. Checkout completion requires explicit buyer approval.
+server:
+  name: uppercase-storefront-ucp
+  transport: http
+  url: https://uppercase.co.in/api/ucp/mcp
+  alt_url: https://uppercase-india.myshopify.com/api/ucp/mcp
+  protocol: ucp
+  ucp_versions: ['2026-04-08', '2026-01-23']
+  discovery: https://uppercase.co.in/.well-known/ucp
+  schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+  probe:
+    date: '2026-07-21'
+    method: POST tools/list
+    result: >-
+      200 JSON-RPC response; error -32001 "UCP discovery failed /
+      invalid_profile_url" until the calling agent supplies a profile URI —
+      endpoint is live and enforcing UCP agent identification.
+tools:
+  - name: search_catalog
+    description: Find products matching the buyer's intent (documented in /llms.txt agent flow).
+  - name: create_cart
+    description: Create a cart and add desired items.
+  - name: create_checkout
+    description: Start the purchase flow.
+  - name: update_checkout
+    description: Set shipping address and method.
+  - name: complete_checkout
+    description: Finalize the purchase (buyer must approve payment).
+capabilities:
+  - dev.ucp.shopping.cart
+  - dev.ucp.shopping.checkout
+  - dev.ucp.shopping.fulfillment
+  - dev.ucp.shopping.discount
+  - dev.ucp.shopping.order
+  - dev.ucp.shopping.catalog.search
+  - dev.ucp.shopping.catalog.lookup
+  - dev.shopify.catalog
+payment_handlers:
+  - com.google.pay
+  - dev.shopify.card
+related:
+  - llms/uppercase-llms.txt
+  - llms/uppercase-agents.md
+  - well-known/uppercase-ucp.json

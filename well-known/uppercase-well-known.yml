@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for the only host in
+  apis.yml (https://uppercase.co.in — a Shopify-powered storefront). Status is
+  the HTTP code observed at fetch time. The OpenID Connect and OAuth
+  authorization-server documents are served by Shopify customer accounts
+  (issuer https://shopify.com/authentication/67539140858) on the store's
+  domain; the UCP document is the store's Universal Commerce Protocol merchant
+  profile advertising an MCP shopping endpoint. Each 200 with a real payload
+  was saved verbatim.
+hosts:
+  - host: https://uppercase.co.in
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        type: application/json
+        file: uppercase-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        type: application/json
+        file: uppercase-oauth-authorization-server.json
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/ucp
+        status: 200
+        type: application/json
+        file: uppercase-ucp.json
+notes:
+  - /llms.txt and /agents.md also return 200 on this host; both are saved
+    verbatim under llms/ (agents.md is the canonical agent-facing document,
+    llms.txt mirrors it).
