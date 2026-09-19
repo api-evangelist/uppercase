@@ -83,6 +83,12 @@ apis:
   - Commerce
   - Shopping
   - MCP
+  - Universal Commerce Protocol
+  - Agents
+  tags_raw:
+  - Commerce
+  - Shopping
+  - MCP
   - UCP
   - Agents
   properties:
