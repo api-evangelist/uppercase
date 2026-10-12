@@ -1,0 +1,19 @@
+# DERIVED by build-integration-preconfigs.py (roadmap#949). Overlay on the PARTNER's contract:
+# where rentle's enum names uppercase, and what that value is.
+overlay: 1.0.0
+info:
+  title: uppercase as a network in rentle's contract
+  version: 1.0.0
+extends: https://raw.githubusercontent.com/api-evangelist/rentle/refs/heads/main/openapi/rentle-merchant-api-openapi.yml
+actions:
+- target: $.components.schemas.MerchantDTO.properties.branding.properties.buttonTextTransform.anyOf[0]
+  update:
+    x-apievangelist-integration:
+      values:
+        uppercase:
+          provider: uppercase
+          relationship: network
+          evidence: https://github.com/api-evangelist/rentle/blob/main/openapi/rentle-merchant-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py

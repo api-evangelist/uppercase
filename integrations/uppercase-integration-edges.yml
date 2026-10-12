@@ -1,0 +1,31 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/uppercase/integrations
+- https://n8n.io/integrations/uppercase/
+- https://composio.dev/toolkits/uppercase
+- https://monid.ai/tools/uppercase
+checked:
+- https://composio.dev/toolkits/uppercase
+- https://monid.ai/tools/uppercase
+- https://n8n.io/integrations/uppercase/
+- https://zapier.com/apps/uppercase/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: rentle
+  partner: rentle
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: network
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/rentle/blob/main/openapi/rentle-merchant-api-openapi.yml
+  contract_reference:
+    repo: rentle
+    spec_file: rentle-merchant-api-openapi.yml
+    value: uppercase
+    property: MerchantDTO.branding.buttonTextTransform
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates: []
