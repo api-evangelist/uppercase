@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Uppercase is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Uppercase is an Accel-backed, design-first and environmentally sensitive Indian travel-gear brand selling backpacks, trolley bags, duffles, messenger and sling bags direct-to-consumer at uppercase.co.in. The Shopify-powered storefront is notably agent-ready: it publishes /llms.txt and /agents.md agent instructions, a Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp, a live MCP shopping endpoint at /api/ucp/mcp (catalog search, cart, checkout with buyer-approved payment), OIDC/OAuth 2.0 customer authentication, and unauthenticated product/collection JSON for read-only agents.
 
-Backed by: accel — https://uppercase.co.in/
+**Areas:** Company · Consumer · Travel · Luggage · Backpacks · E-Commerce · Retail · Sustainability · Agentic Commerce
+
+## Uppercase on APIs.io
+
+Everything profiled for Uppercase is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/uppercase/](https://apis.io/providers/uppercase/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Uppercase Storefront Agent Commerce (UCP/MCP)](https://apis.io/apis/uppercase/uppercase-storefront-agent-commerce-ucpmcp/) — Agent-driven shopping surface on the uppercase storefront implementing the Universal Commerce Protocol over MCP: discover via /.well-known/ucp, then…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [uppercase-storefront-ucp](https://apis.io/servers/uppercase/uppercase-storefront-ucp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Uppercase Authentication](https://apis.io/security/uppercase/uppercase-authentication/)
+- [Uppercase Domain Security](https://apis.io/security/uppercase/uppercase-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Uppercase Scopes](https://apis.io/scopes/uppercase/uppercase-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://uppercase.co.in/)
+- [Support](https://uppercase.co.in/pages/complaint-form)
+- [Blog](https://uppercase.co.in/blogs/blogs)
+- [Terms of service](https://uppercase.co.in/policies/terms-of-service)
+- [Privacy policy](https://uppercase.co.in/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 21.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 27.6 |
+
+**Agent readiness 13.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/uppercase/](https://apis.io/providers/uppercase/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Uppercase: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/uppercase/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
